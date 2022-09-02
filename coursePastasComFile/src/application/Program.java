@@ -33,6 +33,14 @@ public class Program {
         boolean success = new File(strPath + "\\subdir").mkdir();
         System.out.println("Diretorio criado com sucesso: " + success);
 
+        System.out.println("Enter a folder path: ");
+        String strPaste = sc.nextLine();
+
+        File path2 = new File(strPaste);
+        System.out.println("Apenas nome: " + path2.getName());
+        System.out.println("Só Caminho: " + path2.getParent());
+        System.out.println("Caminho completo: " + path2.getPath());
+
         sc.close();
     }
 }
