@@ -75,7 +75,7 @@ public class Program {
 
         for (Product p : list) { //leia-se: para cada item 'p' da minha lista 'lista', faça...
             System.out.println(p);
-        }*/
+        }
 
     }
 }
