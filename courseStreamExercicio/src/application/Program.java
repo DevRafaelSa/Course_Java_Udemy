@@ -45,9 +45,11 @@ public class Program {
 
             //neste ponto o arquivo ja foi lido e todos os produtos ja estao armazenados na Lista list (linha 31)
 
-
+            // fiz um pipeline - converti pra stream
             double avg = list.stream()
+                    //chamei o .map pq a lista eh de produtos e eu so preciso do preco q eh double
                     .map(p -> p.getPrice())
+                    //permite fazer o nomatorio dos precos (inicio, (funcao -> condicao)
                     .reduce(0.0, (x,y) -> x + y) / list.size();
 
             System.out.println("Average price: " + String.format("%.2f", avg));
